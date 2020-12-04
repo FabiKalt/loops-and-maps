@@ -10,6 +10,7 @@
 
 #### <a href="#section3"> 3. Explore mapping functions of the Purrr package</a>
 
+<div style=”width:90px; height;60px; float:left; background-color:#CCC; text-align:center;”>My text</div>
 
 {% capture callout %}
 All the resources for this tutorial can be downloaded from [this Github repository](https://github.com/EdDataScienceEES/tutorial-FabiKalt). Clone and download the repo as a zipfile, then unzip it.
