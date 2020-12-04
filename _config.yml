@@ -1,3 +1,3 @@
 theme: jekyll-theme-cayman
-title: Are for loops really that "bad"?
+title: Are for loops really that 'bad'?
 description: An exploration into the differences between for() loops and mapping functions using the `Purrr` Package
