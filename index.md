@@ -14,12 +14,6 @@
 ---
 
 All the resources for this tutorial can be downloaded from [this Github repository](https://github.com/EdDataScienceEES/tutorial-FabiKalt). Clone and download the repo as a zipfile, then unzip it.
-<<<<<<< HEAD
-=======
-
----
-
->>>>>>> cab6a77838b00381dff41908f1e9e167992f0854
 
 ---
 
@@ -207,11 +201,9 @@ map2 <- function (x, y, f, ...) {
 We can also modify the input for our map() function. For example, map2() applies a function to pairs of elements from two lists or vectors.
 
 
-<<<<<<< HEAD
+
 ## Challenge yourself:
-=======
-### Challenge yourself:
->>>>>>> cab6a77838b00381dff41908f1e9e167992f0854
+
 If you want to learn more about the different iterations of the map() function and get some practical experience, here is a little challenge for yourself.
 1.	Create a character vector
 2.	Create a new dataframe
