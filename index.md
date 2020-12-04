@@ -75,7 +75,9 @@ An essential part of bread making is to give the dough time to rise. This proces
 
 
 
+<div style=”width:90px; height;60px; float:left; background-color:#CCC; text-align:center;”>Have a nice day!</div>
 
+![Sourdough.jpeg](Sourdough.jpeg)
 
 
 
