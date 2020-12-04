@@ -1,12 +1,10 @@
-# <center>Are for loops really that "bad"?</center>
-## <center>An exploration into the differences between for() loops and mapping functions using the `Purrr` Package</center>
 ###### _Created by Fabian Kalt_, s1968412@ed.ac.uk
 
 ### Tutorial Aims
 
-#### <a href="#section1"> 1. Find answer to "Are `for()` loops bad?"</a>
+#### <a href="#section1"> 1. Explore the differences between `for()` loops and `map()` functions</a>
 
-#### <a href="#section2"> 2. Explore the differences between `for()` loops and `map()` functions</a>
+#### <a href="#section2"> 2. Find answer to the question of 'Are `for()` loops bad?'</a>
 
 #### <a href="#section3"> 3. Explore mapping functions within the Purrr package</a>
 
@@ -25,7 +23,7 @@ Welcome to this workshop where we explore the question of ‘Are for() loops rea
 
 
 
-<a name="section1"></a>
+
 
 ## 2. Bread Recipes
 
@@ -45,7 +43,7 @@ Let’s keep that in mind for now and move back to the coding world.
 
 
 
-<a name="section2"></a>
+<a name="section1"></a>
 
 ## 3. For() loops and map() functions
 
@@ -132,6 +130,8 @@ bread_2 <- breadproof %>% map_dbl(median, na.rm = TRUE)
 
 The map() function in this case takes each element of the breadproof dataframe, computes the mean or median of it and saves the results as a double vector. The output is the same as the for() loop output above. With the map() function though, it is very clear what this function does and the difference between the two is easily identified. With the map() function from the Purrr package, only those actions that change between the applications are kept visible in the code and are thus easy to spot.
 
+<a name="section2"></a>
+
 Now, let’s take a look behind the scenes and explore what the map function actually does:
 
 ```
@@ -155,20 +155,21 @@ This is only to visualise how map() functions work, the actual code behind the m
 
 Referring back to our bread recipe example, we can see that we took the same steps to make the recipe or the code more efficient by generalising most of its text or code. Instead of writing a complete for() loop every time, you get a function that does it for you.
 
-<<<<<<< HEAD
 ## 4. Conclusion
 We can now say for certain that for() loops in themselves are not bad at all, as loops are essentially what we are using in functional programming as well. The difference lies in efficiency improvements and better readability when using the map() function, as well as a reduction in a possible margin of error by avoiding additional lines of code. Exploring the what the functions in code packages actually do helps us understand our code better and gives us more confidence when we use those packages in the future. Hopefully, this tutorial gave you a useful insight in the differences between for() loops and functional programming and more generally illustrated the importance of taking a look ‘behind the scenes’ and understanding what the code actually does.
 
+<a name="section3"></a>
 
 ## 5. Mapping with the Purrr package
-=======
-### Conclusion
-We can now say for certain that for() loops in themselves are not bad at all, as loops are essentially what we are using in functional programming as well. The difference lies in efficiency improvements and better readability when using the map() function, as well as a reduction in a possible margin of error by avoiding additional lines of code. Exploring the what the functions in code packages actually do helps us understand our code better and gives us more confidence when we use those packages in the future. Hopefully, this tutorial gave you a useful insight in the differences between for() loops and functional programming and more generally illustrated the importance of taking a look ‘behind the scenes’ and understanding what the code actually does.
-
-
-### Mapping with the Purrr package
->>>>>>> cab6a77838b00381dff41908f1e9e167992f0854
-Take a look at the very useful cheat sheet of the Purrr package and focus on the ‘apply functions’ on the left side. You can see that there are several iterations of the map() functions, which can be split into two categories:
+Take a look at the very useful <a href="https://github.com/rstudio/cheatsheets/blob/master/purrr.pdf" target="_blank">Purrr cheat sheet</a> and focus on the ‘apply functions’ on the left side.
+\
+\
+![Purrr cheat sheet](05_resources/Purr_cheatsheet_snippel.PNG)
+\
+\
+\
+\
+You can see that there are several iterations of the map() functions, which can be split into two categories:
 #### 1.	Specifying the output:
 
 We can add suffixes to our map() functions depending on what type of output we want. For example, the pure map() returns the output as a list and map_int() returns the output in the form of an integer vector. Let's take another look at what happens behind the scenes here:
@@ -183,7 +184,13 @@ map_int <- function (x, f, ...) {
   output
 }
 ```
-The difference to our previous code with the map_dbl() function is only in the specification of the output vector, which is now specified to be an integer vector. Behind the scenes it would look like this:
+The difference to our previous code with the map_dbl() function is only in the specification of the output vector, which is now specified to be an integer vector.
+
+
+
+#### 2.	Specifying the input:
+
+We can also modify the input for our map() function. For example, map2() applies a function to pairs of elements from two lists or vectors.
 
 ```
 # Behind the scenes of map2() function
@@ -195,24 +202,31 @@ map2 <- function (x, y, f, ...) {
   output
 }
 ```
+The difference here is that two variables are called upon in the function (x and y, instead of only x previously). This allows the function to be applied to pairs of elements from both variables.
 
-#### 2.	Specifying the input:
-
-We can also modify the input for our map() function. For example, map2() applies a function to pairs of elements from two lists or vectors.
 
 
 
 ## Challenge yourself:
+If you want to learn more about the different iterations of the map() function and get some practical experience, here is a little challenge for yourself. Use different iterations of the map() function from the Purrr package and try to build a generic code that would work as this map() function. Basically, create a 'behind the scenes' code of the following map() functions in question as we did above. You can use the <a href="https://github.com/rstudio/cheatsheets/blob/master/purrr.pdf" target="_blank">Purrr cheat sheet</a> for some help on the map() functions.
 
-If you want to learn more about the different iterations of the map() function and get some practical experience, here is a little challenge for yourself.
-1.	Create a character vector
-2.	Create a new dataframe
-3.	Map2 of that new dataframe
-4.	Map2 as a double vector.
-
-
+1.	Create a character vector as output
+2.	Create a logical vector as output
+3.	Apply a function to pairs of elements from two lists
+4.	Apply a function to pairs of elements from two lists and create a double vector as output
 
 
+See [Challenge Yourself Script](https://github.com/EdDataScienceEES/tutorial-FabiKalt/blob/master/01_script/loops%20and%20maps_tutorial_FK.R) for solutions.
 
 
-For more on `for()` loops and `map()` functions, read the official <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">Purrr cheatsheet</a>. If you are looking for a comprehensive guide for R, take a look at <a href="https://r4ds.had.co.nz/iteration.html#the-map-functions" target="_blank">R for Data Science by Hadley Wickham & Garrett Grolemund</a>, which includes a lot of information about for() loops and the map() functions of the Purrr package.
+## Tutorial outcomes
+1. You know the differences between `for()` loops and `map()` functions and what happens behind the scene.
+
+2. You learned that map() functions are essentially efficient `for()` loops.
+
+3. You can use the mapping functions within the `Purrr` package for functional programming confidently.
+
+
+## Resources
+
+For more on `for()` loops and `map()` functions, read the official <a href="https://github.com/rstudio/cheatsheets/blob/master/purrr.pdf" target="_blank">Purrr cheat sheet</a>. If you are looking for a comprehensive guide for R, take a look at <a href="https://r4ds.had.co.nz/iteration.html#the-map-functions" target="_blank">R for Data Science by Hadley Wickham & Garrett Grolemund</a>, which includes a lot of information about for() loops and the map() functions of the Purrr package.
