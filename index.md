@@ -1,14 +1,3 @@
-# <center>Are for loops really that "bad"?</center>
-## <center>An exploration into the differences between for() loops and mapping functions using the `Purrr` Package</center>
-###### _Created by Fabian Kalt_, s1968412@ed.ac.uk
-
-### Tutorial Aims
-
-#### <a href="#section1"> 1. Find answer to "Are `for()` loops bad?"</a>
-
-#### <a href="#section2"> 2. Explore the differences between `for()` loops and `map()` functions</a>
-
-#### <a href="#section3"> 3. Explore mapping functions of the Purrr package</a>
 
 
 All the resources for this tutorial can be downloaded from [this Github repository](https://github.com/EdDataScienceEES/tutorial-FabiKalt). Clone and download the repo as a zipfile, then unzip it.
@@ -20,8 +9,6 @@ Welcome to this workshop where we explore the question of ‘Are for() loops rea
 
 
 
-
-<a name="section1"></a>
 
 ## 1. Bread Recipes
 
@@ -44,7 +31,6 @@ Let’s keep that in mind for now and move back to the coding world.
 
 
 
-<a name="section2"></a>
 
 ## 2. For() loops and map() functions
 
