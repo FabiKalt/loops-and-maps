@@ -14,6 +14,12 @@
 ---
 
 All the resources for this tutorial can be downloaded from [this Github repository](https://github.com/EdDataScienceEES/tutorial-FabiKalt). Clone and download the repo as a zipfile, then unzip it.
+<<<<<<< HEAD
+=======
+
+---
+
+>>>>>>> cab6a77838b00381dff41908f1e9e167992f0854
 
 ---
 
@@ -155,11 +161,19 @@ This is only to visualise how map() functions work, the actual code behind the m
 
 Referring back to our bread recipe example, we can see that we took the same steps to make the recipe or the code more efficient by generalising most of its text or code. Instead of writing a complete for() loop every time, you get a function that does it for you.
 
+<<<<<<< HEAD
 ## 4. Conclusion
 We can now say for certain that for() loops in themselves are not bad at all, as loops are essentially what we are using in functional programming as well. The difference lies in efficiency improvements and better readability when using the map() function, as well as a reduction in a possible margin of error by avoiding additional lines of code. Exploring the what the functions in code packages actually do helps us understand our code better and gives us more confidence when we use those packages in the future. Hopefully, this tutorial gave you a useful insight in the differences between for() loops and functional programming and more generally illustrated the importance of taking a look ‘behind the scenes’ and understanding what the code actually does.
 
 
 ## 5. Mapping with the Purrr package
+=======
+### Conclusion
+We can now say for certain that for() loops in themselves are not bad at all, as loops are essentially what we are using in functional programming as well. The difference lies in efficiency improvements and better readability when using the map() function, as well as a reduction in a possible margin of error by avoiding additional lines of code. Exploring the what the functions in code packages actually do helps us understand our code better and gives us more confidence when we use those packages in the future. Hopefully, this tutorial gave you a useful insight in the differences between for() loops and functional programming and more generally illustrated the importance of taking a look ‘behind the scenes’ and understanding what the code actually does.
+
+
+### Mapping with the Purrr package
+>>>>>>> cab6a77838b00381dff41908f1e9e167992f0854
 Take a look at the very useful cheat sheet of the Purrr package and focus on the ‘apply functions’ on the left side. You can see that there are several iterations of the map() functions, which can be split into two categories:
 #### 1.	Specifying the output:
 
@@ -193,7 +207,11 @@ map2 <- function (x, y, f, ...) {
 We can also modify the input for our map() function. For example, map2() applies a function to pairs of elements from two lists or vectors.
 
 
+<<<<<<< HEAD
 ## Challenge yourself:
+=======
+### Challenge yourself:
+>>>>>>> cab6a77838b00381dff41908f1e9e167992f0854
 If you want to learn more about the different iterations of the map() function and get some practical experience, here is a little challenge for yourself.
 1.	Create a character vector
 2.	Create a new dataframe
